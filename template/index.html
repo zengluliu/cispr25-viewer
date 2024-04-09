@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> CISPR-25 查询 </title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+
+    <form>
+      <div class="v">
+        <!-- Version of manual -->
+        <label for="version_manual">version:</label>
+        <select id="version_manual">
+          <option value="v2016">CISPR25-2016</option>
+          <option value="v2021">CISPR25-2021</option>
+        </select>
+        <!-- level of measurement -->
+        <label for="level">level:</label>
+        <select id="level">
+          <option value="class5">class 5</option>
+          <option value="class4">class 4</option>
+          <option value="class3">class 3</option>
+          <option value="class2">class 2</option>
+          <option value="class1">class 1</option>
+        </select>
+      </div>
+      <!-- Peak/Qpeak/Average -->
+      <div class="s">
+        <label>catgory:</label>
+        <label>
+          <input type="checkbox" id="peak" checked>peak
+        </label>
+        <label>
+          <input type="checkbox" id="qpeak">qpeak
+        </label>
+        <label>
+          <input type="checkbox" id="average">average
+        </label>
+        <!-- hold trace on display -->
+        <label class="h"><input type="checkbox" id="hold">hold trace</label>
+      </div>
+    </form>
+    
+    <!--plot -->
+    <div id="plotce"></div>
+    <div id="plotre"></div>
+
+    <script src="./render.js" ></script>
+  </body>
+</html>

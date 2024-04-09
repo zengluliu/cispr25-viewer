@@ -1,0 +1,46 @@
+{
+  "name": "cispr25-viewer",
+  "main": "main.js",
+  "description": "cispr25 viewer for EMC design",
+  "version":"1.0.0",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build"
+  },
+  "author": "zenglu liu",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "plotly.js-dist": "^2.30.1"
+  },
+  "devDependencies": {
+    "electron": "^29.2.0",
+    "electron-builder": "^24.13.3"
+  },
+
+
+  "build": {
+    "productName":"cispr25-viewer",
+    "directories": {
+      "output": "build"
+    },
+    "extraFiles":[
+      "src/**/*"
+    ],
+    "win": {  
+       "icon": "src/image/inst.png",
+        "target": [{
+            "target": "portable",
+            "arch": ["ia32"]
+        }]
+    },
+    "nsis":{
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false
+    }
+  }
+
+}

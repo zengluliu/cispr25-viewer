@@ -1,0 +1,46 @@
+
+/* 表单的整体样式 */
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {  
+    background-color: #fdfbfb;
+    padding: 7px;
+    width: fit-content;
+    margin: 20px auto;
+    display:flex;
+}
+.s,.v{
+    padding-left:10px;
+    padding-right: 10px;
+    margin-left:20px;
+    margin-right: 20px;
+}
+
+.h{
+    padding-left:10px;
+}
+
+select{
+    border-color: #cac2c296;
+    border-radius: 2px;
+    padding-top:3px;
+    padding-bottom:3px;   
+}
+select:focus{
+    border-color:rgb(15, 137, 162);
+}
+select:active{
+    border-color:rgba(19, 106, 219, 0.388);
+}
+
+
+/* 复选框的样式 */
+form input[type="checkbox"] {
+    margin-top: 4px; /* 上移复选框 */
+    vertical-align: middle; /* 垂直居中对齐 */
+}
+
+
+
